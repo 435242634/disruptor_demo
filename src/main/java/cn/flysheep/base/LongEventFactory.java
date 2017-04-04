@@ -1,0 +1,14 @@
+package cn.flysheep.base;
+
+import com.lmax.disruptor.EventFactory;
+
+/**
+ * 需要让disruptor为我们创建事件，我们同时还声明了一个EventFactory来实例化Event对象。
+ * Created by FlySheep on 17/4/4.
+ */
+public class LongEventFactory implements EventFactory {
+
+    public Object newInstance() {
+        return new LongEvent();
+    }
+}
